@@ -1,7 +1,4 @@
 import type { Metadata } from 'next'
-import { Navbar } from '@/components/Navbar'
-import { Footer } from '@/components/Footer'
-import { WhatsAppButton } from '@/components/WhatsAppButton'
 import '@/app/globals.css'
 
 export const metadata: Metadata = {
@@ -9,12 +6,6 @@ export const metadata: Metadata = {
   description: 'Soluciones integrales en parques infantiles, equipos biosaludables y estructuras en madera inmunizada. Diseño, fabricación e instalación en toda Colombia.',
   keywords: 'parques infantiles, equipos biosaludables, parques en madera, calistenia, mobiliario urbano',
   viewport: 'width=device-width, initial-scale=1',
-  openGraph: {
-    type: 'website',
-    locale: 'es_CO',
-    url: 'https://ebatec.co',
-    siteName: 'EBATEC',
-  },
 }
 
 export default function RootLayout({
@@ -30,12 +21,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
       </head>
       <body className="bg-ebatec-dark text-white antialiased">
-        <Navbar />
-        <main>
-          {children}
-        </main>
-        <Footer />
-        <WhatsAppButton />
+        {children}
       </body>
     </html>
   )
